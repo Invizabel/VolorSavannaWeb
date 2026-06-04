@@ -2,14 +2,18 @@
     <head>
         <title>Volor Savanna</title>
         <script>
-            let is_player = 0;
-            
-            if (is_player != 1)
+            function fetch_name()
             {
-                let name = "Player";
-                let death_level = name + ", YOU LOSE!<br>THE END!";
-                let victory_level = name + ", YOU WIN!<br>THE END!";
-                is_player = 1;
+                let cookies = document.cookie.split(';');
+                for (let cookie of cookies)
+                {
+                    cookie = cookie.trim();
+                    if (cookie.startsWith("name="))
+                    {
+                        return cookie.split("=")[1];
+                    }
+                }
+                return "Player";
             }
             
             function reset_js()
@@ -176,7 +180,9 @@
             }
 
             function hunter()
-            {   
+            {
+                let name = fetch_name()
+                
                 rand = Math.floor(Math.random() * 2) + 1;
                 document.cookie = "random_cookie=" + rand.toString() + "; Path=/;";
                 
@@ -390,7 +396,9 @@
             }
             
             function the_mighty_lion()
-            {   
+            {
+                let name = fetch_name()
+                
                 rand = Math.floor(Math.random() * 2) + 1;
                 document.cookie = "random_cookie=" + rand.toString() + "; Path=/;";
                 
@@ -527,6 +535,8 @@
             
             function terrain()
             {
+                let name = fetch_name()
+                
                 rand = Math.floor(Math.random() * 2) + 1;
                 document.cookie = "random_cookie=" + rand.toString() + "; Path=/;";
 
@@ -641,6 +651,8 @@
 
             function warrior()
             {
+                let name = fetch_name()
+                
                 floor(Math.random() * 2) + 1;
                 document.cookie = "random_cookie=" + rand.toString() + "; Path=/;";
                 
@@ -750,6 +762,8 @@
 
             function crafter()
             {
+                let name = fetch_name()
+                
                 rand = Math.floor(Math.random() * 2) + 1;
                 document.cookie = "random_cookie=" + rand.toString() + "; Path=/;";
                 
@@ -876,6 +890,8 @@
 
             function farmer()
             {
+                let name = fetch_name()
+                
                 rand = Math.floor(Math.random() * 2) + 1;
                 document.cookie = "random_cookie=" + rand.toString() + "; Path=/;";
                 
@@ -1003,6 +1019,8 @@
             
             function medicine_person()
             {
+                let name = fetch_name()
+                
                 if (document.cookie.includes("medicine_person_list_0=0"))
                 {
                     document.getElementById("my_text").innerHTML = "You have chosen to be a medicine person!<br>A man is very sick with a fever.<br>What do you want to do?<br>1- Not do anything; 2- Wash him<br>Make your choice " + name + ":<br>";
