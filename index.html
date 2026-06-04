@@ -86,8 +86,6 @@
             {
                 document.getElementById("my_text").innerHTML = "What is your name?";
                 name = document.forms["choiceForm"]["choice_field"].value;
-                death_level = name + ", YOU LOSE!<br>THE END!";
-                victory_level = name + ", YOU WIN!<br>THE END!";
                 if (name != "")
                 {
                     document.cookie = "name=" + name + "; Path=/;";
@@ -182,6 +180,8 @@
             function hunter()
             {
                 let name = fetch_name()
+                death_level = name + ", YOU LOSE!<br>THE END!";
+                victory_level = name + ", YOU WIN!<br>THE END!";
                 
                 rand = Math.floor(Math.random() * 2) + 1;
                 document.cookie = "random_cookie=" + rand.toString() + "; Path=/;";
@@ -398,6 +398,8 @@
             function the_mighty_lion()
             {
                 let name = fetch_name()
+                death_level = name + ", YOU LOSE!<br>THE END!";
+                victory_level = name + ", YOU WIN!<br>THE END!";
                 
                 rand = Math.floor(Math.random() * 2) + 1;
                 document.cookie = "random_cookie=" + rand.toString() + "; Path=/;";
@@ -536,6 +538,8 @@
             function terrain()
             {
                 let name = fetch_name()
+                death_level = name + ", YOU LOSE!<br>THE END!";
+                victory_level = name + ", YOU WIN!<br>THE END!";
                 
                 rand = Math.floor(Math.random() * 2) + 1;
                 document.cookie = "random_cookie=" + rand.toString() + "; Path=/;";
@@ -652,6 +656,8 @@
             function warrior()
             {
                 let name = fetch_name()
+                death_level = name + ", YOU LOSE!<br>THE END!";
+                victory_level = name + ", YOU WIN!<br>THE END!";
                 
                 floor(Math.random() * 2) + 1;
                 document.cookie = "random_cookie=" + rand.toString() + "; Path=/;";
@@ -763,6 +769,8 @@
             function crafter()
             {
                 let name = fetch_name()
+                death_level = name + ", YOU LOSE!<br>THE END!";
+                victory_level = name + ", YOU WIN!<br>THE END!";
                 
                 rand = Math.floor(Math.random() * 2) + 1;
                 document.cookie = "random_cookie=" + rand.toString() + "; Path=/;";
@@ -891,6 +899,8 @@
             function farmer()
             {
                 let name = fetch_name()
+                death_level = name + ", YOU LOSE!<br>THE END!";
+                victory_level = name + ", YOU WIN!<br>THE END!";
                 
                 rand = Math.floor(Math.random() * 2) + 1;
                 document.cookie = "random_cookie=" + rand.toString() + "; Path=/;";
@@ -1020,6 +1030,8 @@
             function medicine_person()
             {
                 let name = fetch_name()
+                death_level = name + ", YOU LOSE!<br>THE END!";
+                victory_level = name + ", YOU WIN!<br>THE END!";
                 
                 if (document.cookie.includes("medicine_person_list_0=0"))
                 {
