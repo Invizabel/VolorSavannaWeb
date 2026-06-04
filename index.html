@@ -80,10 +80,10 @@
             {
                 document.getElementById("my_text").innerHTML = "What is your name?";
                 name = document.forms["choiceForm"]["choice_field"].value;
+                death_level = name + ", YOU LOSE!<br>THE END!";
+                victory_level = name + ", YOU WIN!<br>THE END!";
                 if (name != "")
                 {
-                    death_level = name + ", YOU LOSE!<br>THE END!";
-                    victory_level = name + ", YOU WIN!<br>THE END!";
                     document.cookie = "name=" + name + "; Path=/;";
                 }
             }
