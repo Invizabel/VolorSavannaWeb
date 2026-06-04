@@ -71,11 +71,11 @@
             function user_name()
             {
                 document.getElementById("my_text").innerHTML = "What is your name?";
-                globalThis.name = document.forms["choiceForm"]["choice_field"].value;
+                window.name = document.forms["choiceForm"]["choice_field"].value;
                 if (name != "")
                 {
-                    globalThis.death_level = name + ", YOU LOSE!\nTHE END!";
-                    globalThis.victory_level = name + ", YOU WIN!\nTHE END!";
+                    window.death_level = name + ", YOU LOSE!\nTHE END!";
+                    window.victory_level = name + ", YOU WIN!\nTHE END!";
                     document.cookie = "name=" + name + "; Path=/;";
                 }
             }
