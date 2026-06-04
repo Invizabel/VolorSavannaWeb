@@ -71,12 +71,13 @@
             function user_name()
             {
                 document.getElementById("my_text").innerHTML = "What is your name?";
-                window.name = document.forms["choiceForm"]["choice_field"].value;
+                name = document.forms["choiceForm"]["choice_field"].value;
                 if (name != "")
                 {
                     window.death_level = name + ", YOU LOSE!<br>THE END!";
                     window.victory_level = name + ", YOU WIN!<br>THE END!";
                     document.cookie = "name=" + name + "; Path=/;";
+                    window.name = name;
                 }
             }
 
