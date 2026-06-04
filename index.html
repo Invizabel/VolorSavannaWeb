@@ -5,8 +5,8 @@
             if (!document.cookie.includes("is_player=1"))
             {
                 let name = "Player";
-                death_level = name + ", YOU LOSE!<br>THE END!";
-                victory_level = name + ", YOU WIN!<br>THE END!";
+                let death_level = name + ", YOU LOSE!<br>THE END!";
+                let victory_level = name + ", YOU WIN!<br>THE END!";
                 let is_player = "is_player=" + "1" + "; Path=/;";
             }
             
@@ -82,6 +82,8 @@
                 name = document.forms["choiceForm"]["choice_field"].value;
                 if (name != "")
                 {
+                    death_level = name + ", YOU LOSE!<br>THE END!";
+                    victory_level = name + ", YOU WIN!<br>THE END!";
                     document.cookie = "name=" + name + "; Path=/;";
                 }
             }
