@@ -2,12 +2,13 @@
     <head>
         <title>Volor Savanna</title>
         <script>
-            if (!document.cookie.includes("is_player=1"))
+            let is_player = 0;
+            if (is_player != 1)
             {
                 let name = "Player";
                 let death_level = name + ", YOU LOSE!<br>THE END!";
                 let victory_level = name + ", YOU WIN!<br>THE END!";
-                document.cookie = "is_player=" + "1" + "; Path=/;";
+                is_player = 1;
             }
             
             function reset_js()
