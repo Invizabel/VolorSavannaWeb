@@ -2,10 +2,6 @@
     <head>
         <title>Volor Savanna</title>
         <script>
-            let name = "Player";
-            let death_level = name + ", YOU LOSE!\nTHE END!"
-            let victory_level = name + ", YOU WIN!\nTHE END!"
-            
             function reset_js()
             {   
                 document.cookie = "name=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
@@ -75,11 +71,11 @@
             function user_name()
             {
                 document.getElementById("my_text").innerHTML = "What is your name?";
-                name = document.forms["choiceForm"]["choice_field"].value;
+                window.name = document.forms["choiceForm"]["choice_field"].value;
                 if (name != "")
                 {
-                    death_level = name + ", YOU LOSE!\nTHE END!"
-                    victory_level = name + ", YOU WIN!\nTHE END!"
+                    window.death_level = name + ", YOU LOSE!\nTHE END!"
+                    window.victory_level = name + ", YOU WIN!\nTHE END!"
                     document.cookie = "name=" + name + "; Path=/;";
                 }
             }
