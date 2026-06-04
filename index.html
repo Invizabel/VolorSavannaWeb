@@ -71,12 +71,12 @@
             function user_name()
             {
                 document.getElementById("my_text").innerHTML = "What is your name?";
-                window.player_name = document.forms["choiceForm"]["choice_field"].value;
-                if (player_name != "")
+                window.name = document.forms["choiceForm"]["choice_field"].value;
+                if (name != "")
                 {
-                    window.death_level = player_name + ", YOU LOSE!<br>THE END!";
-                    window.victory_level = player_name + ", YOU WIN!<br>THE END!";
-                    document.cookie = "name=" + player_name + "; Path=/;";
+                    window.death_level = name + ", YOU LOSE!<br>THE END!";
+                    window.victory_level = name + ", YOU WIN!<br>THE END!";
+                    document.cookie = "name=" + name + "; Path=/;";
                 }
             }
 
@@ -172,7 +172,7 @@
                 
                 if (document.cookie.includes("hunter_list_0=0"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to be a hunter!<br>Do you want to go hunt or stay put?<br><br>1- Hunt; 2- Stay put<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to be a hunter!<br>Do you want to go hunt or stay put?<br><br>1- Hunt; 2- Stay put<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -185,7 +185,7 @@
 
                 if (document.cookie.includes("hunter_list_1=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to go hunt!<br>You have gone hunting.<br>You didn't find any food.<br>You return to your village.<br>Luckily, the farmer has enough crops to last your tribe a week.<br>Do you want to go hunt right away to make up lost time or do you choose to go eat?<br><br>1- Hunt; 2- Eat<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to go hunt!<br>You have gone hunting.<br>You didn't find any food.<br>You return to your village.<br>Luckily, the farmer has enough crops to last your tribe a week.<br>Do you want to go hunt right away to make up lost time or do you choose to go eat?<br><br>1- Hunt; 2- Eat<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -204,7 +204,7 @@
 
                 if (document.cookie.includes("hunter_list_2=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to go hunt!<br>You go on a successful hunt that should last your tribe a month.<br>However, you are very tired and because you didn't eat, you have become very sick with malnutrition.<br>Unluckily for you, the tribe's medicine woman is very busy and has a lot of patients to take care of first.<br>Do you wish to wait for her or tough it out?<br><br>1- Wait for her; 2- Tough it out<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to go hunt!<br>You go on a successful hunt that should last your tribe a month.<br>However, you are very tired and because you didn't eat, you have become very sick with malnutrition.<br>Unluckily for you, the tribe's medicine woman is very busy and has a lot of patients to take care of first.<br>Do you wish to wait for her or tough it out?<br><br>1- Wait for her; 2- Tough it out<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -217,7 +217,7 @@
 
                 if (document.cookie.includes("hunter_list_2=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to eat.<br>You are fully fueled with energy.<br>Do you want to go hunting or play a game with the rest of your tribe?<br><br>1- Hunt; 2- Play a game with the rest of my tribe<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to eat.<br>You are fully fueled with energy.<br>Do you want to go hunting or play a game with the rest of your tribe?<br><br>1- Hunt; 2- Play a game with the rest of my tribe<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -230,7 +230,7 @@
 
                 if (document.cookie.includes("hunter_list_3=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to wait for her.<br>Because you have chosen to wait for her patiently, she attends to you in a matter of a couple days.<br>You are better in a week.<br>Some white men have come to your tribe.<br>They're asking to trade you guns for some of your tribe's animal pelts.<br>Do you trade them pelts for guns?<br><br>1- Trade; 2- Not trade<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to wait for her.<br>Because you have chosen to wait for her patiently, she attends to you in a matter of a couple days.<br>You are better in a week.<br>Some white men have come to your tribe.<br>They're asking to trade you guns for some of your tribe's animal pelts.<br>Do you trade them pelts for guns?<br><br>1- Trade; 2- Not trade<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -249,7 +249,7 @@
 
                 if (document.cookie.includes("hunter_list_4=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to hunt.<br>You have found a bunch of zebras to eat.<br>Some white men are willing to trade your tribe rifles for some of your zebras.<br>Recently, there have been some highly wanted criminals that trade weapons and drugs on the black market.<br>The problem is, you don't know if that's them.<br>Do you trade?<br>What about decline the offer?<br>Or do you report them to the authorities?<br><br>1- Trade; 2- Decline the trade; 3- Report them to the authorities<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to hunt.<br>You have found a bunch of zebras to eat.<br>Some white men are willing to trade your tribe rifles for some of your zebras.<br>Recently, there have been some highly wanted criminals that trade weapons and drugs on the black market.<br>The problem is, you don't know if that's them.<br>Do you trade?<br>What about decline the offer?<br>Or do you report them to the authorities?<br><br>1- Trade; 2- Decline the trade; 3- Report them to the authorities<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -262,7 +262,7 @@
 
                 if (document.cookie.includes("hunter_list_4=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to play a game with the rest of your tribe.<br>Everyone has a good time and you guys have an awesome feast.<br>There is a hunting challenge that your tribe is having.<br>The challenge is to go hunt The Mighty Lion!<br>Do you want to go hunt The Mighty Lion with your tribe to win the challenge?<br><br>1- Yes; 2- No<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to play a game with the rest of your tribe.<br>Everyone has a good time and you guys have an awesome feast.<br>There is a hunting challenge that your tribe is having.<br>The challenge is to go hunt The Mighty Lion!<br>Do you want to go hunt The Mighty Lion with your tribe to win the challenge?<br><br>1- Yes; 2- No<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -275,7 +275,7 @@
 
                 if (document.cookie.includes("hunter_list_5=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to trade.<br>They trade you guns.<br>Do you want to go hunt The Mighty Lion?<br><br>1- Yes; 2- No<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to trade.<br>They trade you guns.<br>Do you want to go hunt The Mighty Lion?<br><br>1- Yes; 2- No<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -288,7 +288,7 @@
 
                 if (document.cookie.includes("hunter_list_5=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen not to trade.<br>Because of this they want to kill you.<br>Do you escape?<br><br>1- Find out!<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen not to trade.<br>Because of this they want to kill you.<br>Do you escape?<br><br>1- Find out!<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -313,7 +313,7 @@
 
                 if (document.cookie.includes("hunter_list_6=3"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to report them to the authorities.<br>These guys turn out to be the wanted criminals after all.<br>Your tribe gains importance in the African community because you turned these criminals into the authorities.<br>Do you want to go hunt The Mighty Lion?<br><br>1- Yes; 2- No<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to report them to the authorities.<br>These guys turn out to be the wanted criminals after all.<br>Your tribe gains importance in the African community because you turned these criminals into the authorities.<br>Do you want to go hunt The Mighty Lion?<br><br>1- Yes; 2- No<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -386,7 +386,7 @@
                 
                 if (document.cookie.includes("the_mighty_lion_list_0=0"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to hunt The Mighty Lion.<br>You have been on your journey for about a week now.<br>The trail splits off into three sections.<br>Do you choose to go through the canyon?<br>How about the prairie?<br>Or what about continuing on through the forest?<br><br>1- Canyon; 2- Prairie; 3- Forest<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to hunt The Mighty Lion.<br>You have been on your journey for about a week now.<br>The trail splits off into three sections.<br>Do you choose to go through the canyon?<br>How about the prairie?<br>Or what about continuing on through the forest?<br><br>1- Canyon; 2- Prairie; 3- Forest<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -405,7 +405,7 @@
 
                 if (document.cookie.includes("the_mighty_lion_list_1=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to go through the prairie!<br>Which way do you travel?<br><br>1- Left; 2- Right<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to go through the prairie!<br>Which way do you travel?<br><br>1- Left; 2- Right<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -418,7 +418,7 @@
 
                 if (document.cookie.includes("the_mighty_lion_list_1=3"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to go through the forest!<br>You see a river.<br>Do you drink from it?<br><br>1- Yes; 2- No<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to go through the forest!<br>You see a river.<br>Do you drink from it?<br><br>1- Yes; 2- No<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -437,7 +437,7 @@
 
                 if (document.cookie.includes("the_mighty_lion_list_2=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to go right.<br>There are zebras in front of you after only about an hour of walking.<br>Do you kill them for food?<br><br>1- Yes; 2- No<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to go right.<br>There are zebras in front of you after only about an hour of walking.<br>Do you kill them for food?<br><br>1- Yes; 2- No<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -464,7 +464,7 @@
 
                 if (document.cookie.includes("the_mighty_lion_list_4=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to kill the zebras.<br>Because you have chosen to do this you don't go hungry.<br>Night falls.<br>Do you sleep on the ground or in a tree?<br><br>1- Ground; 2- Tree<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to kill the zebras.<br>Because you have chosen to do this you don't go hungry.<br>Night falls.<br>Do you sleep on the ground or in a tree?<br><br>1- Ground; 2- Tree<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -489,7 +489,7 @@
 
                 if (document.cookie.includes("the_mighty_lion_list_5=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to sleep in a tree.<br>No animals eat you.<br>You see a river.<br>Do you drink from it?<br><br>1- Yes; 2- No<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to sleep in a tree.<br>No animals eat you.<br>You see a river.<br>Do you drink from it?<br><br>1- Yes; 2- No<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -522,7 +522,7 @@
 
                 if (document.cookie.includes("terrain_list_0=0"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to drink from the river.<br>Luckily, the water doesn't have any diseases or viruses.<br>You are full.<br>You need to cross the river.<br>However, the river is very deep.<br>You could make a temporary bridge but that would kill vital time to hunt The Mighty Lion.<br>The fastest way to cross the river is to make a raft.<br>What do you do?<br><br>1- Make a bridge; 2- Build a raft<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to drink from the river.<br>Luckily, the water doesn't have any diseases or viruses.<br>You are full.<br>You need to cross the river.<br>However, the river is very deep.<br>You could make a temporary bridge but that would kill vital time to hunt The Mighty Lion.<br>The fastest way to cross the river is to make a raft.<br>What do you do?<br><br>1- Make a bridge; 2- Build a raft<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -535,7 +535,7 @@
 
                 if (document.cookie.includes("terrain_list_1=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to make a bridge.<br>Your patience pays off and you get across the river in no time!<br>The path splits in two.<br>Do you travel through the hills or the extreme hills?<br><br>1- Hills; 2- Extreme hills<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to make a bridge.<br>Your patience pays off and you get across the river in no time!<br>The path splits in two.<br>Do you travel through the hills or the extreme hills?<br><br>1- Hills; 2- Extreme hills<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -554,7 +554,7 @@
 
                 if (document.cookie.includes("terrain_list_2=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to go through the hills.<br>You travel through the hills and see The Mighty Lion!<br>What weapon do you want to use?<br><br>1- Knife; 2- Bow and arrows; 3- Spear; 4- Gun<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to go through the hills.<br>You travel through the hills and see The Mighty Lion!<br>What weapon do you want to use?<br><br>1- Knife; 2- Bow and arrows; 3- Spear; 4- Gun<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -573,7 +573,7 @@
 
                 if (document.cookie.includes("terrain_list_3=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to use your trusty knife to kill The Mighty Lion!<br>So, " + player_name + " do you kill The Mighty Lion?<br><br>1- Find out!<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to use your trusty knife to kill The Mighty Lion!<br>So, " + name + " do you kill The Mighty Lion?<br><br>1- Find out!<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -586,7 +586,7 @@
 
                 if (document.cookie.includes("terrain_list_3=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to use your mighty bow and arrows to kill The Mighty Lion!<br>So, " + player_name + " do you kill The Mighty Lion?<br><br>1- Find out!<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to use your mighty bow and arrows to kill The Mighty Lion!<br>So, " + name + " do you kill The Mighty Lion?<br><br>1- Find out!<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -599,7 +599,7 @@
 
                 if (document.cookie.includes("terrain_list_3=3"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to use your powerful spear to kill The Mighty Lion.<br>So, " + player_name + " do you kill The Mighty Lion?<br><br>1- Find out!<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to use your powerful spear to kill The Mighty Lion.<br>So, " + name + " do you kill The Mighty Lion?<br><br>1- Find out!<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -636,7 +636,7 @@
                 
                 if (document.cookie.includes("warrior_list_0=0"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to be a warrior!<br>Do you want to go hunt The Mighty Lion or stay put?<br><br>1- Hunt The Mighty Lion; 2- Stay put<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to be a warrior!<br>Do you want to go hunt The Mighty Lion or stay put?<br><br>1- Hunt The Mighty Lion; 2- Stay put<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -657,7 +657,7 @@
 
                 if (document.cookie.includes("warrior_list_1=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to stay put.<br>Without warning a neighboring tribe attacks.<br>Do you choose to get your bow and arrows in your hut, or do you choose to fight them off with your knife on hand?<br><br>1- Go get my bow and arrows; 2- Use my knife<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to stay put.<br>Without warning a neighboring tribe attacks.<br>Do you choose to get your bow and arrows in your hut, or do you choose to fight them off with your knife on hand?<br><br>1- Go get my bow and arrows; 2- Use my knife<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -676,7 +676,7 @@
 
                 if (document.cookie.includes("warrior_list_2=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to use your knife.<br>You are very skilled with a knife.<br>Eventually the enemy tribe retreats.<br>The chief has told you to go take a weekend off at the Big Pond.<br>You go to the Big Pond and enjoy it very much.<br>You see a crying baby by the side of the Big Pond.<br>Do you pick up the baby and bring him home or just ignore him?<br><br>1- Pick him up and bring him home; 2- Just ignore him<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to use your knife.<br>You are very skilled with a knife.<br>Eventually the enemy tribe retreats.<br>The chief has told you to go take a weekend off at the Big Pond.<br>You go to the Big Pond and enjoy it very much.<br>You see a crying baby by the side of the Big Pond.<br>Do you pick up the baby and bring him home or just ignore him?<br><br>1- Pick him up and bring him home; 2- Just ignore him<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -689,7 +689,7 @@
 
                 if (document.cookie.includes("warrior_list_3=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to pick up the baby and bring him home.<br>The baby turns out to be an orphan.<br>His mother was killed by the enemy tribe and the baby was left by the Big Pond.<br>You raise him as your own.<br>He becomes a great warrior and you name him Bobert.<br>You need to go hunt down the enemy that attacked your tribe years ago.<br>Do you take your son with you?<br><br>1- Yes; 2- No<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to pick up the baby and bring him home.<br>The baby turns out to be an orphan.<br>His mother was killed by the enemy tribe and the baby was left by the Big Pond.<br>You raise him as your own.<br>He becomes a great warrior and you name him Bobert.<br>You need to go hunt down the enemy that attacked your tribe years ago.<br>Do you take your son with you?<br><br>1- Yes; 2- No<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -702,7 +702,7 @@
 
                 if (document.cookie.includes("warrior_list_3=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to just ignore him.<br>Do you choose to go after the enemy tribe with the few warriors you have left?<br><br>1- Yes; 2- No<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to just ignore him.<br>Do you choose to go after the enemy tribe with the few warriors you have left?<br><br>1- Yes; 2- No<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -715,7 +715,7 @@
 
                 if (document.cookie.includes("warrior_list_4=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to take your son with you.<br>Your hunting party would have died if you didn't have your son.<br>Since your son is a great warrior the enemy tribe which you now know as Yosemite plans on never attacking your tribe again!<br>You return home and find out your son has a brand-new kid.<br>Bobert, your son, names him Mighty " + player_name + " Jr.<br>You finally have a grandson.<br>You die at a good old age.<br>You pass away happily in your sleep.<br>" + victory_level;
+                    document.getElementById("my_text").innerHTML = "You have chosen to take your son with you.<br>Your hunting party would have died if you didn't have your son.<br>Since your son is a great warrior the enemy tribe which you now know as Yosemite plans on never attacking your tribe again!<br>You return home and find out your son has a brand-new kid.<br>Bobert, your son, names him Mighty " + name + " Jr.<br>You finally have a grandson.<br>You die at a good old age.<br>You pass away happily in your sleep.<br>" + victory_level;
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                 }
 
@@ -745,7 +745,7 @@
                 
                 if (document.cookie.includes("crafter_list_0=0"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to be a crafter!<br>You need to craft some arrows.<br>How do you want to craft them?<br>1- Put red dye on the feathers; 2- Just make them<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to be a crafter!<br>You need to craft some arrows.<br>How do you want to craft them?<br>1- Put red dye on the feathers; 2- Just make them<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -758,7 +758,7 @@
 
                 if (document.cookie.includes("crafter_list_1=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to put red dye on the feathers!<br>Because you put red dye on the feathers none were lost so the crafters were able to bring home more food!<br>Because of this you have one month's worth of food for the winter!<br>You have been asked to craft some spearheads.<br>How do you want to craft them?<br>1- Put poison on the spearheads; 2- Just make them<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to put red dye on the feathers!<br>Because you put red dye on the feathers none were lost so the crafters were able to bring home more food!<br>Because of this you have one month's worth of food for the winter!<br>You have been asked to craft some spearheads.<br>How do you want to craft them?<br>1- Put poison on the spearheads; 2- Just make them<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -777,7 +777,7 @@
 
                 if (document.cookie.includes("crafter_list_2=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to put poison on the spear heads.<br>The animals die easier and your tribe gets more food for the winter.<br>To be exact, one more month of food.<br>Some white men come to your tribe.<br>They're paying a fortune for you to craft them some of your best acacia furniture.<br>Do you want to craft some expensive acacia furniture for them, or do you not want to craft them the furniture their asking for?<br>1- Craft them furniture; 2- Not craft them furniture<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to put poison on the spear heads.<br>The animals die easier and your tribe gets more food for the winter.<br>To be exact, one more month of food.<br>Some white men come to your tribe.<br>They're paying a fortune for you to craft them some of your best acacia furniture.<br>Do you want to craft some expensive acacia furniture for them, or do you not want to craft them the furniture their asking for?<br>1- Craft them furniture; 2- Not craft them furniture<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -796,7 +796,7 @@
 
                 if (document.cookie.includes("crafter_list_3=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to craft them furniture.<br>The people you give the furniture to like your work.<br>They pay you in gold.<br>You can use this to buy a milling machine from a city nearby.<br>Do you buy a milling machine?<br>1- Yes; 2- No<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to craft them furniture.<br>The people you give the furniture to like your work.<br>They pay you in gold.<br>You can use this to buy a milling machine from a city nearby.<br>Do you buy a milling machine?<br>1- Yes; 2- No<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -809,7 +809,7 @@
 
                 if (document.cookie.includes("crafter_list_3=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen not to craft them furniture.<br>Because of this they want to kill you.<br>Do you escape?<br>1- Find out!<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen not to craft them furniture.<br>Because of this they want to kill you.<br>Do you escape?<br>1- Find out!<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -822,7 +822,7 @@
 
                 if (document.cookie.includes("crafter_list_4=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to buy a milling machine.<br>Some business men have come to your tribe and are asking you to build them some wooden toys with your milling machine.<br>Do you want to build them wooden toys with your milling machine?<br>1- Yes; 2- No<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to buy a milling machine.<br>Some business men have come to your tribe and are asking you to build them some wooden toys with your milling machine.<br>Do you want to build them wooden toys with your milling machine?<br>1- Yes; 2- No<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -871,7 +871,7 @@
                 
                 if (document.cookie.includes("farmer_list_0=0"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to be a farmer!<br>Do you want to go farm or sleep in?<br>1- Farm; 2- Sleep in<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to be a farmer!<br>Do you want to go farm or sleep in?<br>1- Farm; 2- Sleep in<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -884,7 +884,7 @@
 
                 if (document.cookie.includes("farmer_list_1=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to farm!<br>You have had a successful season!<br>Your village has a feast.<br>Do you want to store the rest of the food for winter or distribute the food to the whole village?<br>1- Store the food for winter; 2- Distribute the food to the whole village<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to farm!<br>You have had a successful season!<br>Your village has a feast.<br>Do you want to store the rest of the food for winter or distribute the food to the whole village?<br>1- Store the food for winter; 2- Distribute the food to the whole village<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -903,7 +903,7 @@
 
                 if (document.cookie.includes("farmer_list_2=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to store the food for winter.<br>Because you have chosen to store the food for winter your tribe doesn't go hungry.<br>Last year you grew wheat.<br>Do you want to grow wheat again this year or farm corn for the first time in your life?<br>1- Grow wheat again; 2- Farm corn<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to store the food for winter.<br>Because you have chosen to store the food for winter your tribe doesn't go hungry.<br>Last year you grew wheat.<br>Do you want to grow wheat again this year or farm corn for the first time in your life?<br>1- Grow wheat again; 2- Farm corn<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -928,7 +928,7 @@
 
                 if (document.cookie.includes("farmer_list_3=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to farm corn for the first time in your life.<br>Luckily for you, someone else in your village knows how to grow corn.<br>Because of this you grow a lot of corn and your village has a feast.<br>Do you want to store the rest of the food for the winter or distribute the rest of the food to your whole village?<br>1- Store the food for winter; 2- Distribute the food to your whole village<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to farm corn for the first time in your life.<br>Luckily for you, someone else in your village knows how to grow corn.<br>Because of this you grow a lot of corn and your village has a feast.<br>Do you want to store the rest of the food for the winter or distribute the rest of the food to your whole village?<br>1- Store the food for winter; 2- Distribute the food to your whole village<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -941,7 +941,7 @@
 
                 if (document.cookie.includes("farmer_list_4=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to store the food for winter.<br>The corn lasts your tribe the whole winter.<br>Your tribe is thriving!<br>You find out that you have extra corn.<br>It would be nice to get some oxen to help you plow the field.<br>Do you sell your extra corn for oxen?<br>1- Yes; 2- No<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to store the food for winter.<br>The corn lasts your tribe the whole winter.<br>Your tribe is thriving!<br>You find out that you have extra corn.<br>It would be nice to get some oxen to help you plow the field.<br>Do you sell your extra corn for oxen?<br>1- Yes; 2- No<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -960,7 +960,7 @@
 
                 if (document.cookie.includes("farmer_list_5=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to sell your extra corn for oxen.<br>You choose to grow cotton.<br>At the end of the season you have surplus cotton.<br>Do you want to sell your surplus cotton?<br>1- Yes; 2- No<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to sell your extra corn for oxen.<br>You choose to grow cotton.<br>At the end of the season you have surplus cotton.<br>Do you want to sell your surplus cotton?<br>1- Yes; 2- No<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -995,7 +995,7 @@
             {
                 if (document.cookie.includes("medicine_person_list_0=0"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to be a medicine person!<br>A man is very sick with a fever.<br>What do you want to do?<br>1- Not do anything; 2- Wash him<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to be a medicine person!<br>A man is very sick with a fever.<br>What do you want to do?<br>1- Not do anything; 2- Wash him<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -1014,7 +1014,7 @@
 
                 if (document.cookie.includes("medicine_person_list_1=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to wash him.<br>The man recovers from his fever.<br>You are a hero in your village.<br>The chief rewards you with a big meal.<br>The chief offers you a week off.<br>What do you do?<br>1- Take a week off; 2- Tend to more sick people<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to wash him.<br>The man recovers from his fever.<br>You are a hero in your village.<br>The chief rewards you with a big meal.<br>The chief offers you a week off.<br>What do you do?<br>1- Take a week off; 2- Tend to more sick people<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -1027,7 +1027,7 @@
 
                 if (document.cookie.includes("medicine_person_list_2=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to take a week off.<br>You come back and someone is very sick.<br>You are low on herbs.<br>Do you go gather more herbs for your remedies or heal the patient with what you have?<br>1- Go gather more herbs; 2- Heal the patient<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to take a week off.<br>You come back and someone is very sick.<br>You are low on herbs.<br>Do you go gather more herbs for your remedies or heal the patient with what you have?<br>1- Go gather more herbs; 2- Heal the patient<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -1040,7 +1040,7 @@
 
                 if (document.cookie.includes("medicine_person_list_2=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to tend to more sick people.<br>You are very good at your craft.<br>You heal most of the people.<br>However, you are low on herbs.<br>Do you go gather some more herbs or tend to a couple more patients?<br>1- Go gather more herbs; 2- Go tend to a couple more patients<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to tend to more sick people.<br>You are very good at your craft.<br>You heal most of the people.<br>However, you are low on herbs.<br>Do you go gather some more herbs or tend to a couple more patients?<br>1- Go gather more herbs; 2- Go tend to a couple more patients<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -1053,7 +1053,7 @@
 
                 if (document.cookie.includes("medicine_person_list_3=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to go gather more herbs.<br>Because of this the patient dies!<br>You are tried for murder.<br>Are you found guilty?<br>1- Find out!<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to go gather more herbs.<br>Because of this the patient dies!<br>You are tried for murder.<br>Are you found guilty?<br>1- Find out!<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -1066,7 +1066,7 @@
 
                 if (document.cookie.includes("medicine_person_list_3=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to heal the patient.<br>Luckily, you have enough herbs to heal the patient.<br>You need to gather more herbs.<br>You go gather some more herbs.<br>While gathering more herbs you find a signal that says: \"S.O.S. >\"<br>What do you do?<br>1- Go investigate the distress signal; 2- Ignore it; 3- Go back to my tribe and tell someone about it<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to heal the patient.<br>Luckily, you have enough herbs to heal the patient.<br>You need to gather more herbs.<br>You go gather some more herbs.<br>While gathering more herbs you find a signal that says: \"S.O.S. >\"<br>What do you do?<br>1- Go investigate the distress signal; 2- Ignore it; 3- Go back to my tribe and tell someone about it<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -1079,7 +1079,7 @@
 
                 if (document.cookie.includes("medicine_person_list_4=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to gather more herbs.<br>You go gather more herbs.<br>Luckily, none of the patients die and you heal all of them.<br>While gathering more herbs you find a signal that says: \"S.O.S. >\"<br>1- Go investigate the distress signal; 2- Ignore it; 3- Tell someone about it<br>What do you do?<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to gather more herbs.<br>You go gather more herbs.<br>Luckily, none of the patients die and you heal all of them.<br>While gathering more herbs you find a signal that says: \"S.O.S. >\"<br>1- Go investigate the distress signal; 2- Ignore it; 3- Tell someone about it<br>What do you do?<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -1092,7 +1092,7 @@
 
                 if (document.cookie.includes("medicine_person_list_4=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to go tend to a couple more patients.<br>You run out of herbs so you go gather more herbs.<br>Unfortunately, while gathering herbs, all your patients die!<br>You are tried for murder.<br>You are found guilty.<br>How do you want to be executed?<br>1- Arrows; 2- Sword; 3- Flying lawnmower; 4- Musket; 5- Bob the Blobfish<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to go tend to a couple more patients.<br>You run out of herbs so you go gather more herbs.<br>Unfortunately, while gathering herbs, all your patients die!<br>You are tried for murder.<br>You are found guilty.<br>How do you want to be executed?<br>1- Arrows; 2- Sword; 3- Flying lawnmower; 4- Musket; 5- Bob the Blobfish<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -1105,7 +1105,7 @@
 
                 if (document.cookie.includes("medicine_person_list_5=1") && document.cookie.includes("random_cookie=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "Unfortunately, you have been found guilty.<br>How do you want to be executed?<br>1- Arrows; 2- Sword; 3- Stoned; 4- Knife; 5- Gun<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "Unfortunately, you have been found guilty.<br>How do you want to be executed?<br>1- Arrows; 2- Sword; 3- Stoned; 4- Knife; 5- Gun<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -1118,7 +1118,7 @@
 
                 if (document.cookie.includes("medicine_person_list_5=1") && document.cookie.includes("random_cookie=2"))
                 {
-                    document.getElementById("my_text").innerHTML = "You are not found guilty.<br>Some white men come to your tribe.<br>They're asking you if they can settle near you.<br>Do you want them to settle near you?<br>1- Yes; 2- No<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You are not found guilty.<br>Some white men come to your tribe.<br>They're asking you if they can settle near you.<br>Do you want them to settle near you?<br>1- Yes; 2- No<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -1143,7 +1143,7 @@
 
                 if (document.cookie.includes("medicine_person_list_6=3"))
                 {
-                    document.getElementById("my_text").innerHTML = "You have chosen to tell someone about it.<br>Apparently, some members in your tribe say a mother was kidnapped and that there is a $10,000 reward for the capture of the kidnapper!<br>Do you want to go hunt the kidnapper?<br>1- Yes; 2- No<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You have chosen to tell someone about it.<br>Apparently, some members in your tribe say a mother was kidnapped and that there is a $10,000 reward for the capture of the kidnapper!<br>Do you want to go hunt the kidnapper?<br>1- Yes; 2- No<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
@@ -1228,7 +1228,7 @@
 
                 if (document.cookie.includes("medicine_person_list_11=1"))
                 {
-                    document.getElementById("my_text").innerHTML = "You hunt the kidnapper.<br>Do you capture him?<br>1- Find out!<br>Make your choice " + player_name + ":<br>";
+                    document.getElementById("my_text").innerHTML = "You hunt the kidnapper.<br>Do you capture him?<br>1- Find out!<br>Make your choice " + name + ":<br>";
                     var new_choice = parseInt(document.forms["choiceForm"]["choice_field"].value);
                     if (document.forms["choiceForm"]["choice_field"].value.trim() != "")
                     {
